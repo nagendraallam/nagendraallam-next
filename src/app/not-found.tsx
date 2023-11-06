@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function NotFound() {
@@ -8,6 +9,7 @@ export default function NotFound() {
         Cat-astrophe! The page you&apos;re hunting for is in stealth mode.
         Here&apos;s a cat that&apos;s not hiding.
       </h1>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="https://source.unsplash.com/random/?cat"
         alt="404 cat's also 404"

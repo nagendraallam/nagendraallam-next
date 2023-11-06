@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Phudu } from "next/font/google";
+import { Inter, Phudu, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,8 +13,13 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
+import LayoutContainer from "@/components/LayoutContainer";
+
+import { headers } from "next/headers";
 
 const inter = Phudu({ subsets: ["cyrillic-ext"], weight: "600" });
+
+const inter2 = Roboto({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Nagendra Allam",
@@ -27,6 +32,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const headersList = headers();
+  // read the custom x-url header
+  const header_url = headersList.get("x-url") || "";
+
   return (
     <html lang="en">
       <head>
@@ -37,55 +46,12 @@ export default function RootLayout({
       </head>
       <body
         className={
-          "overflow-hidden text-white w-screen h-[100dvh] flex flex-col justify-between bg-[#2e3192] " +
-          inter.className
+          header_url === "weather" ? inter2.className : inter.className
         }
       >
-        <Navbar />
-        {children}
-        <div className="bottom-0 left-0 text-2xl w-full z-10 mb-4 pt-2 border-t-2">
-          <h2 className="text-lg text-center mb-2">find me on :</h2>
-          <div className="flex flex-row w-screen justify-evenly md:justify-center">
-            <a href="https://discord.gg/QXU4yEub" target="_blank">
-              <FontAwesomeIcon
-                icon={faDiscord}
-                className="mb-2 w-7 h-7 md:w-10 md:h-10 md:mr-4 md:ml-4 hover:border-2 cursor-pointer"
-              />
-            </a>
-            <a href="https://github.com/nagendraallam" target="_blank">
-              <FontAwesomeIcon
-                icon={faGithub}
-                className="mb-2 w-7 h-7 md:w-10 md:h-10 md:mr-4 md:ml-4 hover:border-2 cursor-pointer"
-              />
-            </a>
-            <a href="https://www.reddit.com/user/nagi-1998" target="_blank">
-              <FontAwesomeIcon
-                icon={faReddit}
-                className="mb-2 w-7 h-7 md:w-10 md:h-10 md:mr-4 md:ml-4 hover:border-2 cursor-pointer"
-              />
-            </a>
-            <a href="https://linkedin.com/in/nagendraallam" target="_blank">
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="mb-2 w-7 h-7 md:w-10 md:h-10 md:mr-4 md:ml-4 hover:border-2 cursor-pointer"
-              />
-            </a>
-
-            <a href="https://twitter.com/__nagendra__" target="_blank">
-              <FontAwesomeIcon
-                icon={faTwitter}
-                className="mb-2 md:mr-4 md:w-10 md:h-10 md:ml-4 w-7 h-7 hover:border-2 cursor-pointer"
-              />
-            </a>
-
-            <a href="mailto:hello@nagendraallam.com" target="_blank">
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                className="mb-2 w-7 h-7 md:w-10 md:h-10 md:mr-4 md:ml-4 hover:border-2 cursor-pointer"
-              />
-            </a>
-          </div>
-        </div>
+        <LayoutContainer isMain={header_url === "weather"}>
+          {children}
+        </LayoutContainer>
       </body>
     </html>
   );
