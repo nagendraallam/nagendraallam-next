@@ -9,7 +9,7 @@ export default function ContactForm() {
   const path = router.get("success");
 
   return (
-    <div className="flex flex-col md:flex-row overflow-auto ml-2 mr-2">
+    <div className="flex flex-col md:flex-row overflow-auto ml-2 mr-2 color-[#83a598]">
       <div className="text-center md:w-[40vw] md:flex md:flex-col md:justify-center">
         <h1 className="text-4xl underline mt-4">Contact</h1>
         <p className="text-xl mt-2">Get in touch with me</p>
@@ -24,7 +24,7 @@ export default function ContactForm() {
         <h2 className="text-2xl underline mt-4">Drop a message</h2>
         <p className="text-md mb-2">I will get back to you</p>
         <form
-          className="flex flex-col text-white text-left"
+          className="flex flex-col text-[#fbf1c7] text-left"
           action="https://server.nagendraallam.com/api/v1/contact-message"
           method="get"
         >

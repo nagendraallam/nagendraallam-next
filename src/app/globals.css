@@ -4,8 +4,8 @@
 
 .docbody {
   animation: gradient 5s ease infinite;
-  background: linear-gradient(-45deg, #2d388a, #007eac);
-  background-size: 200% 200%;
+  background-color: #076678;
+  color: #fbf1c7;
 }
 
 @keyframes gradient {
