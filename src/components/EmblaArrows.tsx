@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 
-export const usePrevNextButtons = (emblaApi) => {
+export const usePrevNextButtons = (emblaApi: any) => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
@@ -16,7 +16,7 @@ export const usePrevNextButtons = (emblaApi) => {
     emblaApi.scrollNext();
   }, [emblaApi]);
 
-  const onSelect = useCallback((emblaApi) => {
+  const onSelect = useCallback((emblaApi: any) => {
     setPrevBtnDisabled(!emblaApi.canScrollPrev());
     setNextBtnDisabled(!emblaApi.canScrollNext());
   }, []);
@@ -37,7 +37,7 @@ export const usePrevNextButtons = (emblaApi) => {
   };
 };
 
-export const PrevButton = (props) => {
+export const PrevButton = (props: any) => {
   const { children, ...restProps } = props;
 
   return (
@@ -57,7 +57,7 @@ export const PrevButton = (props) => {
   );
 };
 
-export const NextButton = (props) => {
+export const NextButton = (props: any) => {
   const { children, ...restProps } = props;
 
   return (

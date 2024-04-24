@@ -76,7 +76,7 @@ export default function page() {
       </h5>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-[100%] md:p-10">
         {list.map((project, index) => {
-          let imgArr = [];
+          let imgArr: any[] = [];
           project.images.forEach((img: string) => {
             if (img.includes("youtube")) {
               imgArr.push(
