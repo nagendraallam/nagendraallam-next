@@ -44,11 +44,7 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/user-line.svg" />
         <meta name="viewport" content="width=device-width" />
       </head>
-      <body
-        className={
-          header_url === "weather" ? inter2.className : inter.className
-        }
-      >
+      <body className={header_url === "weather" ? inter2.className : ""}>
         <LayoutContainer isMain={header_url === "weather"}>
           {children}
         </LayoutContainer>

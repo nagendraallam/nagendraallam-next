@@ -45,11 +45,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="w-screen text-[#fbf1c7] flex flex-col md:flex-row justify-between items-center md:border-b-2 border-[#83a598]">
+    <div className="w-screen font-['MyWebFont'] text-[#fbf1c7] flex flex-col md:flex-row justify-between items-center md:border-b-2 border-[#83a598]">
       <div className="flex flex-col justify-center mt-4 md:mt-8 md:mb-8 md:ml-10 text-2xl">
         <a
           href="/"
-          className="border-2 pl-2 pr-2 cursor-pointer hover:text-black hover:border-black"
+          className="border-2 border-[#fbf1c7] pl-2 pr-2 cursor-pointer hover:text-black hover:border-black"
         >
           <h1>NA</h1>
         </a>
