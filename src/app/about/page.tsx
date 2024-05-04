@@ -10,7 +10,7 @@ export default function page() {
           <u>Hey there👋</u>
         </h1>
         <p className="text-xl mt-4 font-thin text-justify border-b-2 md:border-b-0 md:text-2xl p-1">
-          I'm deeply passionate about crafting high-performance web and mobile
+          I&apos;m deeply passionate about crafting high-performance web and mobile
           applications, ensuring they resonate with both users and businesses.
           My work revolves around creating seamless digital experiences, driven
           by a love for clean code, efficient architecture, and user-centric
