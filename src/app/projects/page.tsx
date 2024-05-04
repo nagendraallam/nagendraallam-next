@@ -27,7 +27,8 @@ export default function page() {
         "https://www.youtube.com/embed/nNIoueZ-_Yo?si=hBJTkbST9ni3gTGg",
       ],
       shortDesc: "Interactive Experience",
-      longDesc: "",
+      longDesc:
+        "At Snappi.tech, I contributed to the development of an interactive escape room experience for YouTuber Chris Ramsay. This project involved creating a platform that enabled users to assist Ramsay in escaping by solving puzzles within an interactive web application.",
     },
     {
       name: "Moddio Game Engine 2",
@@ -58,7 +59,7 @@ export default function page() {
         "/images/projects/img2.png",
         "/images/projects/img3.png",
       ],
-      shortDesc: "chatgpt integrated to your terminal for easier access",
+      shortDesc: "chatgpt in your terminal",
       longDesc:
         "Askgpt is a Python package that allows users to interact with the OpenAI GPT-3 model directly from the terminal, providing quick and convenient access to powerful language processing capabilities.",
     },
@@ -69,11 +70,23 @@ export default function page() {
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
   return (
-    <div className="w-[100%] h-[100%] overflow-auto flex flex-col items-center">
-      <h2 className="text-5xl mt-4">Portfolio</h2>
+    <div className="w-[100%] h-[100%] overflow-auto flex flex-col items-center text-center">
+      <h3 className="mt-4 md:hidden block">
+        ---------------------------------------
+      </h3>
+      <h3 className="mt-4 hidden md:block">
+        -------------------------------------------------------------------
+      </h3>
+      <h2 className="text-5xl">Portfolio</h2>
       <h5 className="mx-4">
         Profesh Level Unlocked. Get a glimpse of what I can do.
       </h5>
+      <h3 className="md:hidden block">
+        ---------------------------------------
+      </h3>
+      <h3 className="hidden md:block">
+        -------------------------------------------------------------------
+      </h3>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-[100%] md:p-10">
         {list.map((project, index) => {
           let imgArr: any[] = [];
@@ -93,7 +106,7 @@ export default function page() {
           return (
             <div
               key={index + "_project"}
-              className="border-2 border-dashed m-4 flex flex-col cursor-pointer "
+              className="border-2 border-dashed border-[#fbf1c7] m-4 flex flex-col cursor-pointer items-center  justify-around "
             >
               <h1
                 className="text-3xl p-4 cursor-pointer hover:underline"
@@ -105,7 +118,15 @@ export default function page() {
               </h1>
               <EmblaCarousel className slides={imgArr} options={OPTIONS} />
               <h2 className="p-4 text-xl">{project.shortDesc}</h2>
-              <h3 className="p-4 text-lg">{project.longDesc}</h3>
+              <h3 className="p-4 text-lg text-justify">{project.longDesc}</h3>
+              <button
+                onClick={() => {
+                  window.open(project.link, "_blank");
+                }}
+                className="underline border-[#fbf1c7] px-8 py-2 border-[1px] mb-4 hover:text-black hover:bg-[#fbf1c7]  "
+              >
+                View More
+              </button>
             </div>
           );
         })}

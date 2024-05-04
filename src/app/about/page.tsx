@@ -10,23 +10,19 @@ export default function page() {
           <u>Hey there👋</u>
         </h1>
         <p className="text-xl mt-4 font-thin text-justify border-b-2 md:border-b-0 md:text-2xl p-1">
-          I&apos;m Nagendra Allam. Full Stack developer from Bengaluru, India. I
-          make cool web and mobile apps. I&apos;m a huge fan of open source and
-          love to contribute to it. I&apos;m currently working as a Full Stack
-          Developer at
-          <a
-            href="https://www.modd.io"
-            target="_blank"
-            className="text-white hover:underline"
-          >
-            Modd.io
-          </a>
-          .
+          I'm deeply passionate about crafting high-performance web and mobile
+          applications, ensuring they resonate with both users and businesses.
+          My work revolves around creating seamless digital experiences, driven
+          by a love for clean code, efficient architecture, and user-centric
+          design.
         </p>
-        <div className="hidden w-full justify-center mt-4">
-          <button className="border-2 w-fit pl-4 pr-4 pt-2 pb-2 text-bold text-lg">
-            Download Resume
-          </button>
+        <div className=" w-full justify-center mt-8">
+          <a
+            href="/contact"
+            className="border-2 bold underline bg-[#fbf1c7] text-black border-dotted p-2 border-[#000]"
+          >
+            Connect with me?
+          </a>
         </div>
       </div>
       <div className="md:w-[50vw] md:text-2xl p-2 text-lg flex flex-col justify-center md:p-20">

@@ -42,7 +42,7 @@ const EmblaCarousel = (props: any) => {
         <div className="embla__dots">
           {scrollSnaps.map((_: any, index: any) => (
             <DotButton
-              key={index}
+              key={index + "_emable"}
               onClick={() => onDotButtonClick(index)}
               className={"embla__dot".concat(
                 index === selectedIndex ? " embla__dot--selected" : ""

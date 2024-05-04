@@ -49,7 +49,7 @@ export default function Navbar() {
       <div className="flex flex-col justify-center mt-4 md:mt-8 md:mb-8 md:ml-10 text-2xl">
         <a
           href="/"
-          className="border-2 border-[#fbf1c7] pl-2 pr-2 cursor-pointer hover:text-black hover:border-black"
+          className="border-2 border-[#fbf1c7] border-dashed pl-2 pr-2 cursor-pointer hover:text-black hover:border-black"
         >
           <h1>NA</h1>
         </a>

@@ -20,7 +20,7 @@ export default function ContactForm() {
         <h3 className="mt-1 underline">Phone</h3>
         <p className="font-sans">+91 - 9632106766</p>
       </div>
-      <div className="text-center border-t-2 md:border-t-0 md:border-l-2 md:pl-10 md:pr-10 md:pb-10 h-fit m-2 md:w-[60vw]">
+      <div className="text-center border-t-2 md:border-t-0 md:border-l-2 border-[#fbf1c7] md:pl-10 md:pr-10 md:pb-10 h-fit m-2 md:w-[60vw]">
         <h2 className="text-2xl underline mt-4">Drop a message</h2>
         <p className="text-md mb-2">I will get back to you</p>
         <form
@@ -40,32 +40,35 @@ export default function ContactForm() {
 
           <label>Name</label>
           <input
-            className="text-black font-sans w-full h-10 text-xl p-2 rounded-sm"
+            className="text-black font-sans w-full h-10 text-xl p-2 rounded-sm border-2 border-[#fbf1c7] bg-transparent text-[#fbf1c7]"
             type="text"
             id="name"
             name="name"
           />
           <label className="mt-2">Email</label>
           <input
-            className="text-black font-sans w-full h-10 text-xl p-2 rounded-sm"
+            className="text-black font-sans w-full h-10 text-xl p-2 rounded-sm  border-2 border-[#fbf1c7] bg-transparent text-[#fbf1c7]"
             type="email"
             id="email"
             name="email"
           />
           <label className="mt-2">Subject</label>
           <input
-            className="text-black font-sans w-full h-10 text-xl p-2 rounded-sm"
+            className="text-black font-sans w-full h-10 text-xl p-2 rounded-sm  border-2 border-[#fbf1c7] bg-transparent text-[#fbf1c7]"
             type="text"
             id="subject"
             name="subject"
           />
           <label className="mt-2">Message</label>
           <textarea
-            className="text-black font-sans w-full h-24 text-xl p-2 rounded-sm"
+            className="text-black font-sans w-full h-24 text-xl p-2 rounded-sm  border-2 border-[#fbf1c7] bg-transparent text-[#fbf1c7]"
             id="message"
             name="message"
           ></textarea>
-          <button className="border-2 p-2 mt-2" type="submit">
+          <button
+            className="border-2  mt-4 bold underline bg-[#fbf1c7] text-black border-dotted p-2 border-[#000]"
+            type="submit"
+          >
             Send
           </button>
         </form>
