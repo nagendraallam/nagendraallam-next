@@ -48,11 +48,13 @@ body {
   backface-visibility: hidden;
   display: flex;
   touch-action: pan-y;
-  margin-left: calc(var(--slide-spacing) * -1);
+  height: 250px;
 }
 .embla__slide {
   flex: 0 0 var(--slide-size);
   min-width: 0;
+  padding: 10px !important;
+  margin: 10px !important;
   padding-left: var(--slide-spacing);
 }
 .embla__slide__number {

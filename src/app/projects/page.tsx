@@ -63,9 +63,34 @@ export default function page() {
       longDesc:
         "Askgpt is a Python package that allows users to interact with the OpenAI GPT-3 model directly from the terminal, providing quick and convenient access to powerful language processing capabilities.",
     },
+    {
+      name: "Playground Games",
+      link: "https://drive.google.com/drive/folders/146ZKKwOz2BBcqA1BEYct-0aZjH-AhkLO?usp=sharing",
+      images: [
+        "/images/games/pb1.webp",
+        "/images/games/pb2.webp",
+        "/images/games/pb3.webp",
+        "/images/games/pb4.webp",
+        "/images/games/pb5.webp",
+        "/images/games/pb6.webp",
+        "/images/games/gs1.webp",
+        "/images/games/gs2.webp",
+        "/images/games/gs3.webp",
+        "/images/games/gs4.webp",
+        "/images/games/mr1.webp",
+        "/images/games/mr2.webp",
+        "/images/games/mr3.webp",
+        "/images/games/mr4.webp",
+      ],
+      shortDesc: "Indie games I build",
+      longDesc:
+        "Early forays into game design! These childhood projects sparked my creative problem-solving skills and laid the foundation for a lifelong passion for crafting engaging experiences.",
+    },
   ];
 
-  const OPTIONS = {};
+  const OPTIONS = {
+    loop: false,
+  };
   const SLIDE_COUNT = 5;
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
@@ -100,7 +125,19 @@ export default function page() {
                   allowFullScreen
                 ></iframe>
               );
-            } else imgArr.push(<img src={img} alt={img + " image "} />);
+            } else
+              imgArr.push(
+                <img
+                  src={img}
+                  style={{
+                    margin: "10px",
+                    padding: "5px",
+                    objectFit: "contain",
+                    border: "1px solid #fbf1c7",
+                  }}
+                  alt={img + " image "}
+                />
+              );
           });
 
           return (
@@ -116,7 +153,11 @@ export default function page() {
               >
                 {project.name}
               </h1>
-              <EmblaCarousel className slides={imgArr} options={OPTIONS} />
+              <EmblaCarousel
+                images={project.images}
+                slides={imgArr}
+                options={OPTIONS}
+              />
               <h2 className="p-4 text-xl">{project.shortDesc}</h2>
               <h3 className="p-4 text-lg text-justify">{project.longDesc}</h3>
               <button

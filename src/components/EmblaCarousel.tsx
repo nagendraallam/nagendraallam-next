@@ -11,7 +11,11 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const EmblaCarousel = (props: any) => {
   const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    skipSnaps: false,
+    inViewThreshold: 0,
+  });
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
