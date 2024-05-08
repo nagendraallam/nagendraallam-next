@@ -134,6 +134,7 @@ export default function page() {
                     padding: "5px",
                     objectFit: "contain",
                     border: "1px solid #fbf1c7",
+                    borderRadius: "10px",
                   }}
                   alt={img + " image "}
                 />
