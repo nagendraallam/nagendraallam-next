@@ -82,7 +82,7 @@ export default function page() {
         "/images/games/mr3.webp",
         "/images/games/mr4.webp",
       ],
-      shortDesc: "Indie games I build",
+      shortDesc: "Indie games I built",
       longDesc:
         "Early forays into game design! These childhood projects sparked my creative problem-solving skills and laid the foundation for a lifelong passion for crafting engaging experiences.",
     },
