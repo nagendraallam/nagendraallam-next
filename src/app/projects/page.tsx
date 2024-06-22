@@ -173,6 +173,17 @@ export default function page() {
           );
         })}
       </div>
+
+      <div>
+        <button
+          onClick={() => {
+            window.open("https://github.com/nagendraallam", "_blank");
+          }}
+          className="underline border-[#fbf1c7] px-8 py-2 border-dotted border-[3px] text-xl mb-4 hover:text-black hover:bg-[#fbf1c7]  "
+        >
+          Find more projects...
+        </button>
+      </div>
     </div>
   );
 }
