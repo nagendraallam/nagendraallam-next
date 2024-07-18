@@ -2,8 +2,11 @@
 
 import axios from "axios";
 import React, { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   useEffect(() => {
     if (process.env.NEXT_PUBLIC_DEV === "PRODUCTION") {
       axios
@@ -45,7 +48,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="w-screen font-['MyWebFont'] text-[#fbf1c7] flex flex-col md:flex-row justify-between items-center md:border-b-2 border-[#83a598]">
+    <div className="w-screen font-['MyWebFont'] text-[#fbf1c7] flex flex-col md:flex-row justify-between items-center md:border-b-2 border-[#fbf1c7]">
       <div className="flex flex-col justify-center mt-4 md:mt-8 md:mb-8 md:ml-10 text-2xl">
         <a
           href="/"
@@ -58,25 +61,33 @@ export default function Navbar() {
         <ul className="flex flex-row items-center mt-2 md:mt-0 justify-center text-md md:text-2xl">
           <a
             href="/"
-            className={`text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
+            className={` ${
+              pathname === "/" && "underline"
+            } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
           >
             Home
           </a>
           <a
             href={"/about"}
-            className="text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer"
+            className={`  ${
+              pathname === "/about" && "underline"
+            } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
           >
             About
           </a>
           <a
             href="/projects"
-            className="text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer"
+            className={`  ${
+              pathname === "/projects" && "underline"
+            } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
           >
             Projects
           </a>
           <a
             href="/contact"
-            className="text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer"
+            className={` ${
+              pathname === "/contact" && "underline"
+            } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
           >
             Contact
           </a>

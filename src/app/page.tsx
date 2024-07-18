@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex mt-20 w-screen justify-center items-center h-full flex-col">
       <h4 className="text-2xl font-['MyWebFont']  md:text-[1.5vw] w-full pl-[25vw]">
-        Hey There👋, &nbsp; I&apos;m
+        Hey there, I&apos;m
       </h4>
       <h1 className="text-4xl md:text-[9vw] leading-[1] font-['MyWebFont'] ">
         Nagendra Allam

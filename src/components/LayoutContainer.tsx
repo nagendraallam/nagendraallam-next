@@ -27,7 +27,7 @@ export default function LayoutContainer({
       >
         <Navbar />
         {children}
-        <div className="bottom-0 font-['MyWebFont'] left-0 text-2xl w-full z-10 mb-4 pt-2 border-t-2 border-[#83a598]">
+        <div className="bottom-0 font-['MyWebFont'] left-0 text-2xl w-full z-10 mb-4 pt-2 border-t-2 border-[#fbf1c7]">
           <h2 className="text-lg text-center mb-2">find me on :</h2>
           <div className="flex flex-row w-screen justify-evenly md:justify-center">
             <a href="https://discord.gg/QXU4yEub" target="_blank">
