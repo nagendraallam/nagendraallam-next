@@ -1,5 +1,6 @@
 "use client";
 
+import My3DModel from "@/components/AvatarModel";
 import { useSearchParams } from "next/navigation";
 import React from "react";
 
@@ -19,6 +20,8 @@ export default function ContactForm() {
         </a>
         <h3 className="mt-1 underline">Phone</h3>
         <p className="font-sans">+91 - 9632106766</p>
+
+        <My3DModel url="/assets/contact_model.glb" />
       </div>
       <div className="text-center border-t-2 md:border-t-0 md:border-l-2 border-[#fbf1c7] md:pl-10 md:pr-10 md:pb-10 h-fit m-2 md:w-[60vw]">
         <h2 className="text-2xl underline mt-4">Drop a message</h2>
