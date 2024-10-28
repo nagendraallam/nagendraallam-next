@@ -15,8 +15,8 @@ export default function Home() {
           <h2>Full-Stack Developer</h2>
         </div>
       </div>
-      <div className="flex h-[50vh] md:w-[50vw] flex-col">
-        <My3DModel url="/assets/idle_model.glb" />
+      <div className="flex h-[40vh] md:w-[50vw] flex-col">
+        <My3DModel url="/assets/idle_model.glb" controls={true} />
       </div>
     </div>
   );

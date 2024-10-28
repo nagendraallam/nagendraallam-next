@@ -27,7 +27,13 @@ function Model({ url }: { url: string }) {
   return <primitive object={scene} />;
 }
 
-export default function My3DModel({ url }: { url: string }) {
+export default function My3DModel({
+  url,
+  controls,
+}: {
+  url: string;
+  controls: boolean;
+}) {
   return (
     <Canvas
       camera={{
@@ -41,9 +47,10 @@ export default function My3DModel({ url }: { url: string }) {
       <ambientLight intensity={2.5} />
       <directionalLight position={[2, 2, 2]} intensity={1} />
       <Model url={url} />
+
       <OrbitControls
         minDistance={1} // Reduced minimum zoom distance
-        maxDistance={10}
+        maxDistance={3}
         enableZoom={true}
         target={[0, 1, 0]} // Added target to look at the center of the model
         enableDamping={true} // Added smooth camera movement
