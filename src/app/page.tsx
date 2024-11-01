@@ -12,7 +12,7 @@ export default function Home() {
           Nagendra Allam
         </h1>
         <div className="flex flex-col">
-          <h2>Full-Stack Developer</h2>
+          <h2>Software Engineer</h2>
         </div>
       </div>
       <div className="flex h-[40vh] md:w-[50vw] flex-col">
