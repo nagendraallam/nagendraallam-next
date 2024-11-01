@@ -9,7 +9,7 @@ export default function Navbar() {
 
   useEffect(() => {
 
-    axios.post("https://server.nagendraallam.com/api/v1/visit", {
+    axios.post("https://server.nagendraallam.com/api/v1/visit", JSON.stringify({
       userAgent: window.navigator.userAgent,
       location: window.location.href,
       referrer: document.referrer || "--",
@@ -21,7 +21,8 @@ export default function Navbar() {
       ip_data: {
         error: "No IP found",
       },
-    });
+    })
+    );
 
     if (process.env.NEXT_PUBLIC_DEV === "PRODUCTION") {
       try {
