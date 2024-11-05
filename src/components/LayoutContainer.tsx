@@ -30,7 +30,7 @@ export default function LayoutContainer({
         <div className="bottom-0 font-['MyWebFont'] left-0 text-2xl w-full z-10 mb-4 pt-2 border-t-2 border-[#fbf1c7]">
           <h2 className="text-lg text-center mb-2">find me on :</h2>
           <div className="flex flex-row w-screen justify-evenly md:justify-center">
-            <a href="https://discord.gg/QXU4yEub" target="_blank">
+            <a href="https://discord.gg/yfjChHA5Rv" target="_blank">
               <FontAwesomeIcon
                 icon={faDiscord}
                 className="mb-2 w-7 h-7 md:w-10 md:h-10 md:mr-4 md:ml-4 hover:border-2 cursor-pointer"
@@ -55,12 +55,12 @@ export default function LayoutContainer({
               />
             </a>
 
-            <a href="https://twitter.com/__nagendra__" target="_blank">
+            {/* <a href="https://twitter.com/__nagendra__" target="_blank">
               <FontAwesomeIcon
                 icon={faTwitter}
                 className="mb-2 md:mr-4 md:w-10 md:h-10 md:ml-4 w-7 h-7 hover:border-2 cursor-pointer"
               />
-            </a>
+            </a> */}
 
             <a href="mailto:hello@nagendraallam.com" target="_blank">
               <FontAwesomeIcon
