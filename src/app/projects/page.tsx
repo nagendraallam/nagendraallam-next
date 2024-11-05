@@ -89,7 +89,6 @@ export default function page() {
   ];
 
   const OPTIONS = {
-    anotherValue: longDesc,
     loop: false,
   };
   const SLIDE_COUNT = 5;
