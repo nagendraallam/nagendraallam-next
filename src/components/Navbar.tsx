@@ -8,23 +8,24 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-
-    axios.post("https://server.nagendraallam.com/api/v1/visit", JSON.stringify({
-      userAgent: window.navigator.userAgent,
-      location: window.location.href,
-      referrer: document.referrer || "--",
-      cookiesEnabled: navigator.cookieEnabled,
-      screenWidth: window.screen.width,
-      screenHeight: window.screen.height,
-      timeZoneOffset: new Date().getTimezoneOffset(),
-      ip: "",
-      ip_data: {
-        error: "No IP found",
-      },
-    })
-    );
-
     if (process.env.NEXT_PUBLIC_DEV === "PRODUCTION") {
+      axios.post(
+        "https://server.nagendraallam.com/api/v1/visit",
+        JSON.stringify({
+          userAgent: window.navigator.userAgent,
+          location: window.location.href,
+          referrer: document.referrer || "--",
+          cookiesEnabled: navigator.cookieEnabled,
+          screenWidth: window.screen.width,
+          screenHeight: window.screen.height,
+          timeZoneOffset: new Date().getTimezoneOffset(),
+          ip: "",
+          ip_data: {
+            error: "No IP found",
+          },
+        })
+      );
+
       try {
         axios
           .get(
@@ -81,29 +82,33 @@ export default function Navbar() {
         <ul className="flex flex-row items-center mt-2 md:mt-0 justify-center text-md md:text-2xl">
           <a
             href="/"
-            className={` ${pathname === "/" && "underline"
-              } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
+            className={` ${
+              pathname === "/" && "underline"
+            } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
           >
             Home
           </a>
           <a
             href={"/about"}
-            className={`  ${pathname === "/about" && "underline"
-              } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
+            className={`  ${
+              pathname === "/about" && "underline"
+            } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
           >
             About
           </a>
           <a
             href="/projects"
-            className={`  ${pathname === "/projects" && "underline"
-              } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
+            className={`  ${
+              pathname === "/projects" && "underline"
+            } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
           >
             Projects
           </a>
           <a
             href="/contact"
-            className={` ${pathname === "/contact" && "underline"
-              } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
+            className={` ${
+              pathname === "/contact" && "underline"
+            } text-center pl-4 pr-4 pt-1 pb-1 border-2 hover:underline border-transparent hover:border-2 md-hover:border-white cursor-pointer`}
           >
             Contact
           </a>
